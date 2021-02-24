@@ -69,8 +69,12 @@ const storeItems = [
 
 for (i = 0; i < storeItems.length; i++) {
     if ( storeItems[i].inStock === true){
-        $('#list').append('<p class = inStock>$'+ storeItems[i].price + storeItems[i].name + storeItems[i].details)
+        $('#list').append('<div class = inStock>'+ '<p>$'+(storeItems[i].price) + '</p>' + '<p>'+ (storeItems[i].name) + '</p>' + '<p>' + (storeItems[i].details) + '</p>' + '</div>')
     } else if ( storeItems[i].inStock === false){
        
     }
 }
+
+    $('#click').click(function(){
+        $('.content').toggleClass('darkMode');
+    });
